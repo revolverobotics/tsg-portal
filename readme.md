@@ -18,15 +18,22 @@ the `<script>` tags in `index.html`.
 cleanly, e.g.:
 
   * Request 1 (CustomModule2)
-    * Unit Number (Internal): <unit number>
-    * Account Name: <account>
-    * City: <city>
+    * CUSTOMMODULE2_ID: 757044000006514017
+    * CustomModule2 Name: TSG1
+    * Unit Number (Internal): TSG1
+    * SMOWNERID: 757044000006150003
+    * CustomModule2 Owner: Revolve Robotics
     * etc...
 
   * Request 2 (CustomModule4)
-    * Family Member Emal: <email>
-    * Family member Relation: <relation>
+    * CUSTOMMODULE4_ID: 757044000006514021
+    * CustomModule4 Name: REQ2
+    * Request Number: REQ2
+    * SMOWNERID: 757044000006150003
+    * CustomModule4 Owner: Revolve Robotics
     * etc...
+    
+  *Please make sure that all output data is displayed.*
 
 2. Next, write code for an AJAX POST request to the Zoho API.
 
