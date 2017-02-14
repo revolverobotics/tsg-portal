@@ -65,7 +65,7 @@ Zip
   I will be able to see data in the CRM to know whether or not the endpoint
 was called correctly.
 
-If you have any questions, please e-mail me.
+If you have any questions, please chat me.
 
 thank you,
 
