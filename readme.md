@@ -3,7 +3,7 @@
 Hi Anup,
 
 1. Please write code for an AJAX GET request to the Zoho API.
-Display the API call's output in the div layer with id="output".
+Display the API call's output in the `div` layer with `id="output"`.
 
   **Please use jQuery to achieve this.** The code must be contained within
 the `<script>` tags in `index.html`.
