@@ -9,7 +9,9 @@ Display the API call's output in the div layer with id="output".
 the `<script>` tags in `index.html`.
 
   The following API endpoints should be called:
+  
   `https://crm.zoho.com/crm/private/json/CustomModule2/getRecords`
+  
   `https://crm.zoho.com/crm/private/json/CustomModule4/getRecords`
 
   Please parse the JSON and output the data from both GET requests
@@ -29,6 +31,7 @@ cleanly, e.g.:
 2. Next, write code for an AJAX POST request to the Zoho API.
 
   The following endpoint should be called:
+  
   `https://crm.zoho.com/crm/private/xml/CustomModule4/insertRecords?authtoken=AuthToken&scope=crmapi&xmlData=Your%20XML%20Data`
 
   You should insert a record with the following fields using dummy data:
