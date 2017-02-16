@@ -19,7 +19,7 @@ see output about the commands.
 * Next, run `git checkout dev`.
 * Now type `composer install`.
 * You should see `composer` installing the necessary packages.
-* When done, send me a chat and we'll go from here.
+* When done, send me a chat and we'll go from here. Please try to research as much as possible about Git. Also please research Laravel (laravel.com). It is the framework that the code is based on.
 
 thank you,
 
