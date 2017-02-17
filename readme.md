@@ -5,7 +5,7 @@ This effort will be broken up into two phases. Phase I will entail modules being
 ## Phase I
 The following modules are required for our deployment. [PHP Interfaces](http://php.net/manual/en/language.oop5.interfaces.php) will be used to outline the methods for each Class, while the Implementation in each case is an extension of a custom [Client class](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Client/Client.php), which uses [Guzzle](http://docs.guzzlephp.org/en/latest/) to make our request/response calls elegant and easy to manage.
 
-* [ ] Zoom API
+* [ ] Zoom API ([Documentation](https://zoom.us/developer/overview/getting-started-with-rest-api))
   * [ ] Users
     * [ ] Interface
     * [ ] Implementation
@@ -17,13 +17,13 @@ The following modules are required for our deployment. [PHP Interfaces](http://p
   * [x] Accounts (not to be used, but here for code reference)
     * [x] [Interface](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Contracts/Service/Zoom/AccountInterface.php)
     * [x] [Implementation](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Service/Zoom/Accounts.php)
-* [ ] Zoho API
+* [ ] Zoho CRM API ([Documentation](https://www.zoho.com/crm/help/api/?))
   * [ ] PHP array to XML parser for Zoho's input (package?)
-  * [ ] Custom Module 2 (Deployments)
+  * [ ] CustomModule2 (Deployments)
     * [ ] Interface
     * [ ] Implementation
     * [ ] Testing (CRUD)
-  * [ ] Custom Module 4 (Placements)
+  * [ ] CustomModule4 (Placements)
     * [ ] Interface
     * [ ] Implementation
     * [ ] Testing (CRUD)
