@@ -47,12 +47,12 @@ Phase II shall be a collaborative effort to involve using the above classes, onc
   * [ ] Fetch
   * [ ] Create
   * [ ] Update
-  * [ ] (Soft) Delete
+  * [ ] Soft Delete
 * [ ] Placements Controller
   * [ ] Fetch
   * [ ] Create
   * [ ] Update
-  * [ ] Delete
+  * [ ] Soft Delete
   * [ ] Request (Create with `status = 'pending'`)
   * [ ] Approve (Update with `status = 'confirmed'`)
   
