@@ -18,6 +18,15 @@ The following modules are required for our deployment. [PHP Interfaces](http://p
     * [x] [Interface](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Contracts/Service/Zoom/AccountInterface.php)
     * [x] [Implementation](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Service/Zoom/Accounts.php)
     * [ ] Testing (CRUD)
+* [ ] Zoho API
+  * [ ] Custom Module 2 (Deployments)
+    * [ ] Interface
+    * [ ] Implementation
+    * [ ] Testing (CRUD)
+  * [ ] Custom Module 4 (Placements)
+    * [ ] Interface
+    * [ ] Implementation
+    * [ ] Testing (CRUD)
 
 The ultimate goal here is to have a set of classes that allow us to make simple and elegant calls like so:
 ```php
