@@ -25,14 +25,16 @@ class ZoomController extends Controller
 {
     public function newSubscription()
     {
-        $zoomApi = new ZoomAPI([
-            'api_key'    => '',
-            'api_secret' => ''
-        ]);
+        $zoomApi = new ZoomAPI(
+            ['api_key' => 'myKey', 'api_secret' => 'mySecret']
+        );
+        
         // Create a new sub account
-        $response = $zoomApi->accounts->createSubAccount(['input' => []]);
+        $response = $zoomApi->accounts->createSubAccount(['input' => [data]]);
+        
         // Subscribe the sub account to a plan
-        $response = $zoomApi->accounts->subscribePlan(['input' => []]);
+        $response = $zoomApi->accounts->subscribePlan(['input' => [data]]);
+        
         // Notify user with account details
         Mail::to('account-owner@email.com')->queue(new Mailable($response));
     }
