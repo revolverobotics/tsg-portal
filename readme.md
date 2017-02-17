@@ -59,8 +59,7 @@ Phase II shall be a collaborative effort to involve using the above classes, onc
   The controller methods will render the appropriate views.
 
 # Timeline
-[ ] Feb 16 - 24: Phase I
-[ ] Feb 27 - Mar 3: Phase II
-[ ] Mar 6 - 10: Testing & Bugfixes
-[ ] Mar 13 - 17: Testing & Bugfixes, Finalization
-  
+* [ ] Feb 16 - 24: Phase I
+* [ ] Feb 27 - Mar 3: Phase II
+* [ ] Mar 6 - 10: Testing & Bugfixes
+* [ ] Mar 13 - 17: Testing & Bugfixes, Finalization
