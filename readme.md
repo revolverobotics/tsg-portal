@@ -28,6 +28,8 @@ The following modules are required for our deployment. [PHP Interfaces](http://p
     * [ ] Implementation
     * [ ] Testing (CRUD)
 
+  **Note:** A list of required methods for the ZohoAPI can be found in [zoho-required-methods.php](zoho-required-methods.php)
+
 The ultimate goal here is to have a set of classes that allow us to make simple and elegant calls like so:
 ```php
 class ZoomController extends Controller
