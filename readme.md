@@ -1,37 +1,58 @@
-Hi Anup,
+# Scope of Work
 
-Here are updated instructions for the required work.
+This effort will be broken up into two phases. Phase I will entail modules being built out to interact with the required APIs. Phase II will be a collaborative effort in connecting the modules with frontend forms.
 
-# Installation requirements
-* Git for Windows
-* Composer (dependency manager)
+# Phase I
+The following modules are required for our deployment. [PHP Interfaces](http://php.net/manual/en/language.oop5.interfaces.php) will be used to outline the methods for each Class, while the Implementation in each case is an extension of a [Client class](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Client/Client.php), which uses [Guzzle](http://docs.guzzlephp.org/en/latest/) to make our request/response calls elegant and easy to manage.
 
-You should be able to run both `git` and `composer` from the command line and
-see output about the commands.
+* [ ] Zoom API
+  * [ ] Users
+    * [ ] Interface
+    * [ ] Implementation
+    * [ ] Testing (CRUD)
+  * [ ] IM Groups
+    * [ ] Interface
+    * [ ] Implementation
+    * [ ] Testing (CRUD)
+  * [ ] Accounts
+    * [x] [Interface](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Contracts/Service/Zoom/AccountInterface.php)
+    * [x] [Implementation](https://github.com/revolverobotics/tools-sales-ops/blob/master/src/SalesOpz/Service/Zoom/Accounts.php)
+    * [ ] Testing (CRUD)
 
-# Working with our code
-## First
-* From the command line, go to an appropriate directory and run:
-  `git clone git@github.com:revolverobotics/api-frontend.git`
-* You should see the repo download to your computer.
-* When finished downloading, enter the folder and type `git pull origin dev`.
-* Next, run `git checkout dev`.
-* Now type `composer install`.
-* You should see `composer` installing the necessary packages.
+The ultimate goal here is to have a set of classes that allow us to make simple and elegant calls like so:
+```php
+class ZoomController extends Controller
+{
+    public function newSubscription()
+    {
+        $zoomApi = new ZoomAPI([
+            'api_key'    => '',
+            'api_secret' => ''
+        ]);
+        // Create a new sub account
+        $response = $zoomApi->accounts->createSubAccount(['input' => []]);
+        // Subscribe the sub account to a plan
+        $response = $zoomApi->accounts->subscribePlan(['input' => []]);
+        // Notify user with account details
+        Mail::to('account-owner@email.com')->queue(new Mailable($response));
+    }
+...
+```
 
-## Next
-* Go back to your parent directory and `git clone git@github.com:revolverobotics/tools-sales-ops.git`
-* `cd tools-sales-ops`, `composer install`
-* You should see the necessary packages install.
-* Navigate to `tools-sales-ops/src/SalesOpz/Service/Zoom`
-* I have already built an `Accounts.php`. We will need to build out `IMGroups.php` and `Users.php`.
-  * For now, just familiarize yourself with the structure and syntax of the code.
-* Navigate to `tools-sales-ops/src/SalesOpz/Service/Zoho/Inventory/Items.php`
-  * We will need to build out `Deployments.php` and `Placements.php`.
-  * For now, just familiarize yourself with the structure and syntax.
-
-When done, send me a chat and we'll go from here. Please try to research as much as possible about Git. Also please research Laravel (laravel.com). It is the framework that the code is based on.
-
-thank you,
-
-Tim
+## Phase II
+Phase II shall be a collaborative effort to involve using the above classes, once finished, to build out the controller logic for our deployment. The following controllers and methods will be needed:
+* [ ] Deployments Controller
+  * [ ] Fetch
+  * [ ] Create
+  * [ ] Update
+  * [ ] (Soft) Delete
+* [ ] Placements Controller
+  * [ ] Fetch
+  * [ ] Create
+  * [ ] Update
+  * [ ] Delete
+  * [ ] Request (Create with `status = 'pending'`)
+  * [ ] Approve (Update with `status = 'confirmed'`)
+  
+  The controller methods will render the appropriate views.
+  
